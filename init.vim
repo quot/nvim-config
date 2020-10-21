@@ -14,11 +14,12 @@ call plug#begin('~/.config/nvim/plugged')
 " Plugin list
 Plug 'romgrk/doom-one.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline'	" Bottom status bar
 Plug 'vim-airline/vim-airline-themes'
-Plug 'preservim/tagbar'
-Plug 'mhinz/vim-startify'
-Plug 'preservim/nerdtree'
+Plug 'ojroques/vim-scrollstatus' " Scrollbar for Airline
+Plug 'preservim/tagbar'		" Buffer to show code tags
+Plug 'mhinz/vim-startify'	" Start menu
+Plug 'preservim/nerdtree'	" File browser buffer
 
 call plug#end() " List ends here. Plugins become visible to Vim after this call.
 
@@ -34,3 +35,7 @@ colorscheme doom-one
 
 " ==== Airline
 let g:airline_theme='onedark'
+
+" ==== ScrollStatus
+let g:airline_section_x = '%{ScrollStatus()}' " Put ScrollStatus in Airline
+" let g:scrollstatus_size = 20
