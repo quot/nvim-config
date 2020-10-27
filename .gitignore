@@ -1,4 +1,6 @@
 plugged/**
 .netrwhist
 autoload/plug.vim.old
+.netrwbook
+startify-bookmarks.vim
 
